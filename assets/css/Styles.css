@@ -1,0 +1,138 @@
+:root{
+    --color: #FFA559;
+    --color1: #000000;
+    --color2 : #FFFFFF;
+    --color3 : #2D53E5;
+    --color4: #F7E025;
+    --color5: #7D12F8;
+    --color6: #F50C5D;
+    --color7:#7FD6E6;
+
+    /* Color para los fondos */
+    --color01: #161a1d;
+    --color02 : #e9ecef;
+
+    /* Color para las letras */
+    --colorA : #FFFFFF;
+    --colorB: #000000;
+    --colorC: #888B8E;
+
+}
+
+body{
+    font-family: "Kanit", sans-serif;
+    font-style: normal;
+}
+
+/* Navbar */
+
+.Barra1{
+    background-color: var(--color02);
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.LogoPag img {
+    height: 50px;
+    width: 180px;
+}
+
+.TextBarra2{
+    color: var(--colorB);
+}
+
+.TextBarra2:hover{
+    color: var(--color7);
+}
+
+/* Pie de Página */
+.r8{
+    background-color: var(--color02);
+    display: flex;
+    text-align: center;
+}
+
+.a{
+    padding-top: 15px;
+}
+
+.ico1{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    justify-content: space-between;
+    font-size: 360%;
+    color: var(--color1);
+    transition: color 400ms ease;
+}
+
+.textInfe{
+    text-decoration: none;
+    color: var(--colorB);
+}
+
+.ico-anim:hover {
+    color: var(--color6);
+    transition: color 400ms ease;
+}
+.cell:hover {
+    color: var(--color3);
+    transition: color 400ms ease;
+}
+.ico-contc:hover {
+    color: var(--color);
+    transition: color 400ms ease;
+}
+
+
+/* ---------------------------------- Responsive */
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+    .ico1{
+        font-size: 500%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .ico1{
+        font-size: 250%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .ico1 {
+        font-size: 170%;
+    }
+}
+
+@media (max-width: 768px) {
+    .ico1 {
+        font-size: 170%;
+    }
+}
+
+@media (max-width: 550px) {
+    /* Parte superior */
+    .LogoPag img {
+        height: 40px;
+        width: 130px;
+    }
+
+    .BarraOculta{
+        padding-top: 10px;
+    }
+    .SubMenu{
+        padding-bottom: 100px;
+    }
+
+    .form-control{
+        height: auto;
+        width: 120px;
+    }
+
+    /* Parte inferior */
+    .ico1 {
+        font-size: 130%;
+    }
+    .r8{
+        padding-bottom: 25px;
+    }
+}
