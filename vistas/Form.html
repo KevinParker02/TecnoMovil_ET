@@ -10,7 +10,7 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="./assets/css/Styles.css">
+    <link rel="stylesheet" href="../assets/css/Styles.css">
     <!-- Letra -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
         <div class="container-fluid py-0 px-0">
             <nav class="navbar navbar-expand-lg py-2 Barra1">
                 <div class="container-fluid px-2 py-2 ">
-                    <a class="LogoPag me-3 ms-1" href="./index.html"><img src="./assets/images/logoB.png" alt=""></a>
+                    <a class="LogoPag me-3 ms-1" href="../index.html"><img src="../assets/images/logoB.png" alt=""></a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Busca un equipo..." aria-label="Search">
                         <button class="btn btn-outline-success zzz" type="submit"><i class="fa fa-search"></i></button>
@@ -61,77 +61,40 @@
 
     <!-- Aquí irá el contenido de la página -->
     <main>
-        <div class="container-fluid cont2">
-            <!-- carousel -->
-            <div class="row r1">
-                <div class="container ContCarousel">
-                    <div class="slider-wrapper">
-                        <div class="slider">
-                            <img id="slide-1" src="./assets/images/BANNER_XIAOMI.jpg" alt="F1">
-                            <img id="slide-2" src="./assets/images/BANNER_iphone_2000x.jpg" alt="F2">
-                            <img id="slide-3" src="./assets/images/BANNER_ASUS.jpg" alt="F3">
+        <div class="row r6" id="Contacto">
+           <!-- Contactame -->
+           <section class="col-xl-12 col-sm-12 col-xs-12 pb-2 BoxTit6">
+            <h1 class="Titulo6">¿Necesitas consultar por un nuevo equipo o tienes un problema?</h1>
+        </section>
+        <!-- Formulario -->
+        <section class="col-xl-12 col-sm-12 col-xs-12 pb-5 px-5 Caja2">
+            <div class="card Formulario">
+                <div class="card-body">
+                    <form id="myForm" action="https://formsubmit.co/kevinvivanco.dic02@gmail.com" method="POST">
+                        <!-- Nombre completo -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label ContacT pb-2">Ingrese su
+                                nombre</label>
+                            <input type="Text" class="form-control" id="name" name="name" placeholder="">
+                            <!-- Mensaje de error si el campo está vacío -->
+                            <div id="nombreERROR" class="text-danger ContactR"></div>
                         </div>
-                        <div class="slider-nav">
-                            <a href="#slide-1"></a>
-                            <a href="#slide-2"></a>
-                            <a href="#slide-3"></a>
+                        <!-- Correo -->
+                        <div class="mb-3 pb-3">
+                            <label for="exampleInputEmail1" class="form-label ContacT pb-2">Correo</label>
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                            <div id="correoERROR" class="text-danger ContactR"></div>
                         </div>
-                    </div>
+                        <!-- Mensaje -->
+                        <div class="mb-3 pb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label ContacT pb-2">Motivo</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" placeholder=""></textarea>
+                        </div>
+                        <button type="submit" value="Enviar" id="button" class="btn btn-success ContacT">Enviar</button>
+                    </form>
                 </div>
             </div>
-            <!-- Recién llegados -->
-            <div class="row r2">
-                <section class="col-xl-12 col-sm-12 col-xs-12 pb-3">
-                    <h1 class="Titulo2">¡Recién llegados!</h1>
-                </section>
-            </div>
-            <!-- Blog, últimas novedades (Se rellena con Django) -->
-            <div class="row r3">
-                <section class="col-xl-12 col-sm-12 col-xs-12 pb-3">
-                    <h1 class="Titulo2">Últimas novedades</h1>
-                </section>
-                <!-- (Se rellena con Django) -->
-                <section class="container container2">
-                    <!--{% for proyecto in proyectos %}-->
-                        <div class="card card2">
-                                <figure>
-                                <a href="{% url 'proyecto_detalle' proyecto.pk %}">
-                                <img class="imgRepos" src="{{ proyecto.imagen.url }}">
-                                </a>
-                                </figure>
-                            <div class="contenido">
-                                <h3 class="Titulo3">{{ proyecto.titulo }}</h3>
-                            <p class="text-secundary2">{{ proyecto.descripcion }}</p>
-                            </div>
-                        </div>
-                    <!--{% endfor %}-->
-                </section>
-            </div>
-            <!-- Por qué nosostros? -->
-            <div class="row r4">
-                <div class="container ContNosotros">
-                    <section class="col-xl-3 col-sm-12 col-xs-12 CadaDat">
-                        <i class="fa-solid fa-box i4"></i>
-                        <h3 class="Titulo4">Envío GRATIS a todo Chile</h3>
-                        <p class="DetNoso">Por compras superiores a $50.000 y recuerda que todos nuestros envíos cuentan con seguro incluido.</p>
-                    </section>
-                    <section class="col-xl-3 col-sm-12 col-xs-12 CadaDat">
-                        <i class="fa-solid fa-hand-holding-heart i4"></i>
-                        <h3 class="Titulo4">Garantía de Satisfacción incluida</h3>
-                        <p class="DetNoso">De 15 días corridos en todos los productos y con envío de devolución GRATIS.</p>
-                    </section>
-                    <section class="col-xl-3 col-sm-12 col-xs-12 CadaDat">
-                        <i class="fa-solid fa-shop i4"></i>
-                        <h3 class="Titulo4">Compra online y recibe tus productos</h3>
-                        <p class="DetNoso">Ahorra tiempo y esfuerzo comprando desde la web y recibe los productos en tu puerta.</p>
-                    </section>
-                    <section class="col-xl-3 col-sm-12 col-xs-12 CadaDat">
-                        <i class="fa-solid fa-bullhorn i4"></i>
-                        <h3 class="Titulo4">Los precios más competitivos del mercado</h3>
-                        <p class="DetNoso">Nos intereza tu atención, por lo que nos conmueve en ofrecer los precios más competitivos a nivel nacional.</p>
-                    </section>
-                </div> 
-            </div>                
+        </section>
         </div>
     </main>
 
@@ -147,14 +110,14 @@
                     <a class="link m-2 textInfe" href=""><span class="fa-brands fa-instagram ico-anim"></span> Instagram</a>
                     <!-- Cada i tendrá como nombred de calse i1 para modificar su color -->
                     <a class="link m-2 textInfe" href=""><i class="fa-solid fa-phone cell"></i> +569 6664 2434</a>
-                    <a class="link m-2 textInfe" href="./vistas/Form.html"><i class="fa-regular fa-envelope ico-contc"></i> Conctacnos</a>
+                    <a class="link m-2 textInfe" href=""><i class="fa-regular fa-envelope ico-contc"></i> Conctacnos</a>
                 </section>
             </div>
         </div>
     </footer>
 
     <!-- Scripts personalizados -->
-    <script src="./assets/js/Script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../assets/js/Script.js"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
     --color5: #7D12F8;
     --color6: #F50C5D;
     --color7:#7FD6E6;
+    --color8: #FFFFFF;
 
     /* Color para los fondos */
     --color01: #161a1d;
@@ -22,10 +23,10 @@
 body{
     font-family: "Kanit", sans-serif;
     font-style: normal;
-    background-color: var(--colorC);
+    background-color: var(--color8);
 }
 
-/* Navbar */
+/* ----------------- Navbar */
 
 .Barra1{
     background-color: var(--color1);
@@ -50,7 +51,8 @@ body{
 }
 
 
-/* Contenido de la página */
+/* ----------------- Contenido de la página */
+/* Carousel */
 .ContCarousel{
     padding: 2rem;
 }
@@ -82,7 +84,6 @@ body{
     transform: translateX(-50%);
     z-index: 1;
 }
-
 .slider-nav a{
     width: 0.5rem;
     height: 0.5rem;
@@ -95,17 +96,121 @@ body{
 .slider-nav a:hover {
     opacity: 1;
 }
+/* Recién llegados */
+.r2{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+/* Aquí iría el diseño de las tarjetas */
 
-/* Pie de Página */
+/* Tarjetas para las últimas novedades del blog  */
+.r3{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.Titulo2{
+    display: flex;
+    justify-content: left;
+    color: var(--colorB);
+    font-size: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding-bottom: 20px;
+}
+.container2 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si es necesario */
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Espacio entre las tarjetas */
+}
+.col {
+    box-sizing: border-box; 
+}   
+.card2 {
+    margin: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--color2);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+.Titulo3{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.text-secundary2{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3%;
+}
+/* ZONA de "Por qué nosotros?" */
+.r4{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.ContNosotros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.CadaDat{
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+.Titulo4{
+    font-size: 15px;
+}
+.DetNoso{
+    font-size: 13px;
+    color: var(--colorC);
+}
+.i4{
+    font-size: 2rem;
+    color: var(--color7);
+    margin-bottom: 10px;
+}
+/* Contactanos */
+.r6{
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.BoxTit6{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.Titulo6{
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.Formulario{
+    background-color: var(--color02);
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+}
+.ContacT{
+    font-size: 100%;
+}
+.ContactR{
+    font-size: 80%;
+}
+
+/* ----------------- Pie de Página */
 .r8{
     background-color: var(--color1);
     display: flex;
     text-align: center;
     align-items: center;
-}
-
-.a{
-    padding-top: 15px;
 }
 
 .textInfe{
@@ -155,7 +260,27 @@ body{
 }
 
 @media (max-width: 1300px) {
-    
+   /* Contacto */
+   .form-label {
+    font-size: 16px;
+    }
+
+    .Caja2{
+        max-width: 60%;
+        margin: auto;
+    }
+
+    .ContactR {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .ico1 {
+        font-size: 170%;
+    } 
 }
 
 @media (max-width: 768px) {
