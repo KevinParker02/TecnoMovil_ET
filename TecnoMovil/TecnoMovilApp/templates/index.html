@@ -38,8 +38,8 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <ul class="navbar-nav ms-auto BarraOculta">
                             <li><a class="nav-link  TextBarra2" href="{% url 'catalogo' %}"><span class="fa fa-mobile-alt"></span> Equipos</a></li>
-                            <li><a class="nav-link  TextBarra2" href="#"><span class="fa fa-shopping-cart"></span> Carrito</a></li>
-                            <li><a class="nav-link  TextBarra2" href="#"><span class="fa fa-user"></span> Iniciar Sesión</a></li>
+                            <li><a class="nav-link  TextBarra2" href="{% url 'carrito' %}"><span class="fa fa-shopping-cart"></span> Carrito</a></li>
+                            <li><a class="nav-link  TextBarra2" href="http://127.0.0.1:8000/admin/"><span class="fa fa-user"></span> Iniciar Sesión</a></li>
                         </ul>
                     </div>
                 </div>
@@ -85,12 +85,6 @@
                             <div class="ContainerDatos1">
                                 <h2 class="NomCel">{{ celular.nombre }}</h2>
                             </div>
-                            {% comment %}
-                            <form method="post" action="{% url 'agregar_al_carrito' celular.id %}">
-                                {% csrf_token %}
-                                <button type="submit">Comprar</button>
-                            </form>
-                            {% endcomment %}
                         </div>
                         {% endfor %}
                     </div>

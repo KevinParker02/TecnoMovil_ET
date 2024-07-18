@@ -25,3 +25,16 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+#Carrito#
+
+class Carrito(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+class CarritoItem(models.Model):
+    carrito = models.ForeignKey(Carrito, on_delete=models.CASCADE)
+    celular = models.ForeignKey(Celular, on_delete=models.CASCADE)
+    cantidad = models.IntegerField(default=1)
+
+    def subtotal(self):
+        return self.cantidad * self.celular.precio

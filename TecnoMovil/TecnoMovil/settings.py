@@ -143,7 +143,7 @@ JAZZMIN_SETTINGS = {
     "site_header": "Panel de Administrador",  # Encabezado del sitio en el panel de administración.
     "site_brand": "TecnoMovil",  # Marca o nombre del sitio que aparece en la barra de navegación.
     "site_logo": "images/logoC.png",  # Ruta relativa al logotipo que aparece en la barra de navegación.
-    "welcome_sign": "Bienvenido Nombre del programador",  # Mensaje de bienvenida que aparece en la página de inicio de sesión.
+    "welcome_sign": "¡Bienvenido!",  # Mensaje de bienvenida que aparece en la página de inicio de sesión.
     "search_model": "auth.User",  # Modelo utilizado para la búsqueda global en el panel de administración.
     "show_sidebar": True,  # Muestra la barra lateral del menú.
     "navigation_expanded": True,  # Expande la navegación por defecto.
