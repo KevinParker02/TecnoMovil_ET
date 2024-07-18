@@ -20,7 +20,7 @@ def catalogo(request):
     celulares = Celular.objects.all() 
     return render(request, 'vistas/catalogo.html', {'celulares': celulares})
 
-# No funcionó
+# No funcionó este pedacito de código, pero si pude insertar por medio de DBvisualer
 #def catalogo(request):
  #   with connection.cursor() as cursor:
    #     cursor.execute("SELECT * FROM TecnoMovilApp_celular")
