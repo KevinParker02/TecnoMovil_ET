@@ -1,0 +1,23 @@
+INSERT INTO TecnoMovilApp_celular (nombre, precio, description, imagen, stock) 
+VALUES ('Xiaomi 14 Pro',899990,'Con la pantalla de 6,73 pulgadas y resolución 2K (522 ppi), el Xiaomi 14 Pro ofrece una experiencia visual impresionante.','/celulares/X14P.webp',10); 
+
+INSERT INTO TecnoMovilApp_celular (nombre, precio, description, imagen, stock) 
+VALUES ('Xiaomi 14 Ultra',1019990,'Con una cuádruple cámara trasera que ofrece imágenes de alta calidad junto a una calidad de imagen excepcional.','/celulares/X14U.webp',10); 
+
+INSERT INTO TecnoMovilApp_celular (nombre, precio, description, imagen, stock) 
+VALUES ('Pixel 8 pro',799990,'Disfruta de un rendimiento máximo con esta excelente combinación de hardware y software.','/celulares/P8P.png',10); 
+
+INSERT INTO TecnoMovilApp_celular (nombre, precio, description, imagen, stock) 
+VALUES ('Pixel Fold',2399990,'El Fold Píxel también cuenta con una bisagra innovadora que permite un movimiento suave y fluido al abrir y cerrar el teléfono.','/celulares/PF.png',10); 
+
+INSERT INTO TecnoMovilApp_celular (nombre, precio, description, imagen, stock) 
+VALUES ('Samsung s24 Ultra',899990,'Samsung ha optado por la excelencia al incorporar titanio en la construcción del Galaxy S24 Ultra, otorgándole una apariencia sofisticada, resistencia y durabilidad.','/celulares/S24U.png',10); 
+
+INSERT INTO TecnoMovilApp_celular (nombre, precio, description, imagen, stock) 
+VALUES ('Samsung Z Fold 5',1249990,'El Samsung Galaxy Z Fold 5, es el quinto smartphone plegable tipo tableta de la serie Samsung Galaxy Z Fold contando con numerosas mejoras fundamentales.','/celulares/ZF5.png',10); 
+
+INSERT INTO TecnoMovilApp_celular (nombre, precio, description, imagen, stock) 
+VALUES ('Iphone 14 Pro',1099990,'El iPhone 14 Pro conserva el diseño popular basado en el iPhone 12 Pro y es casi idéntico al iPhone 13 Pro.','/celulares/I14PRO.png',10); 
+
+INSERT INTO TecnoMovilApp_celular (nombre, precio, description, imagen, stock) 
+VALUES ('Iphone 15 Pro',1120990,'El iPhone 15 Pro conserva el diseño popular basado en el iPhone 13 Pro y es casi idéntico al iPhone 14 Pro.','/celulares/I15PRO.png',10); 

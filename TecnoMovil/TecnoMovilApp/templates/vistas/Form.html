@@ -1,0 +1,125 @@
+{% load bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap 5.3 -->
+    {% bootstrap_css %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Conexión para los iconos ONLINE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="{% static 'css/Styles.css' %}">
+    <!-- Letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>TecnoMovil_main</title>
+</head>
+<body>
+    <!-- Aquí irá todo el contenido del Navbar -->
+    <header>
+        <div class="container-fluid py-0 px-0">
+            <nav class="navbar navbar-expand-lg py-2 Barra1">
+                <div class="container-fluid px-2 py-2 ">
+                    <a class="LogoPag me-3 ms-1" href="{% url 'home' %}"><img src="{% static 'images/logoB.png' %}" alt=""></a>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Busca un equipo..." aria-label="Search">
+                        <button class="btn btn-outline-success zzz" type="submit"><i class="fa fa-search"></i></button>
+                      </form>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars-staggered zzz1"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <ul class="navbar-nav ms-auto BarraOculta">
+                            <li><a class="nav-link  TextBarra2" href="{% url 'catalogo' %}"><span class="fa fa-mobile-alt"></span> Equipos</a></li>
+                            <li><a class="nav-link  TextBarra2" href="#"><span class="fa fa-shopping-cart"></span> Carrito</a></li>
+                            <li><a class="nav-link  TextBarra2" href="#"><span class="fa fa-user"></span> Iniciar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Aquí irá el contenido de la página -->
+    <main>
+        <div class="row r6" id="Contacto">
+           <!-- Contactame -->
+           <section class="col-xl-12 col-sm-12 col-xs-12 pb-2 BoxTit6">
+            <h1 class="Titulo6">¿Necesitas consultar por un nuevo equipo o tienes un problema?</h1>
+        </section>
+        <!-- Formulario -->
+        <section class="col-xl-12 col-sm-12 col-xs-12 pb-5 px-5 Caja2">
+            <div class="card Formulario">
+                <div class="card-body">
+                    <form id="myForm" action="https://formsubmit.co/kevinvivanco.dic02@gmail.com" method="POST">
+                        <!-- Nombre completo -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label ContacT pb-2">Ingrese su
+                                nombre</label>
+                            <input type="Text" class="form-control" id="name" name="name" placeholder="">
+                            <!-- Mensaje de error si el campo está vacío -->
+                            <div id="nombreERROR" class="text-danger ContactR"></div>
+                        </div>
+                        <!-- Correo -->
+                        <div class="mb-3 pb-3">
+                            <label for="exampleInputEmail1" class="form-label ContacT pb-2">Correo</label>
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                            <div id="correoERROR" class="text-danger ContactR"></div>
+                        </div>
+                        <!-- Mensaje -->
+                        <div class="mb-3 pb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label ContacT pb-2">Motivo</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" placeholder=""></textarea>
+                        </div>
+                        <button type="submit" value="Enviar" id="button" class="btn btn-success ContacT">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <!-- Aquí irá el pie de la página -->
+    <footer>
+        <div class="container-fluid cont3">
+            <div class="row r8">
+                <section class="col-12 col-sm-4 pt-3">
+                    <h5 class="textInfe titulos-infe">Nosotros</h5>
+                    <p class="textInfe">© TecnoMovil.COM</p>
+                    <a href="#" class="textInfe">Políticas de despacho</a><br>
+                    <a href="#" class="textInfe">Políticas de privacidad</a>
+                    <p class="textInfe">2016-2024 Todos los derechos reservados</p>
+                </section>
+                <section class="col-12 col-sm-4 d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="textInfe titulos-infe">Contactos</h5>
+                    <h8 class="textInfe">Síguenos en nuestras redes</h8>
+                    <div class="social-icons d-flex mt-2">
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </section>
+                <section class="col-12 col-sm-4 d-flex flex-column align-items-center align-items-sm-start">
+                    <h5 class="textInfe titulos-infe">Soporte</h5>
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <a class="link m-2 textInfe" href=""><i class="fa-solid fa-phone cell"></i> +569 6664 2434</a>
+                        <a class="link m-2 textInfe" href="{% url 'contacto' %}"><i class="fa-regular fa-envelope ico-contc"></i> Contáctanos</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts personalizados -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'js/Script.js' %}"></script>
+</body>
+</html>

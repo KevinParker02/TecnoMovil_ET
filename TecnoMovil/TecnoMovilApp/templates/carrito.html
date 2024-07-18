@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <ul>
+        {% for item in carrito %}
+        <li>
+            {{ item.cantidad }} x {{ item.celular.nombre }} - {{ item.celular.precio }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'catalogo' %}">Volver al Catálogo</a>
+</body>
+</html>
