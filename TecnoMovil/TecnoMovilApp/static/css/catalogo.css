@@ -1,0 +1,149 @@
+:root{
+    --color: #FFA559;
+    --color1: #000000;
+    --color2 : #FFFFFF;
+    --color3 : #2D53E5;
+    --color4: #F7E025;
+    --color5: #7D12F8;
+    --color6: #2f72b1;
+
+    /* Color para los fondos */
+    --color01: #161a1d;
+    --color02 : #e9ecef;
+
+    /* Color para las letras */
+    --colorA : #FFFFFF;
+    --colorB: #000000;
+    --colorC: #888B8E;
+
+}
+
+body{
+    font-family: "Kanit", sans-serif;
+    font-style: normal;
+}
+
+/* Navbar */
+
+.Barra1{
+    background-color: var(--color1);
+    align-items: center;
+}
+
+.LogoPag img {
+    height: 40px;
+    width: auto;
+}
+
+.TextBarra1{
+    color: var(--colorA);
+}
+
+.TextBarra2{
+    color: var(--colorA);
+}
+
+/* celulares */
+#celulares {
+    max-width: 1200px;
+    padding: 50px 0;
+    margin: auto;
+}
+
+#celulares .titulocelulares {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #111135;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+}
+
+#celulares .fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+#celulares .fila .celular {
+    max-width: 30%;
+    border: 1px solid #000;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+#celulares .fila .celular img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(1);
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+#celulares .fila .celular:hover img {
+    filter: grayscale(0);
+}
+
+#celulares .fila .celular .info {
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #4ad6cd;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    bottom: -40px;
+    transition: 0.5s;
+}
+
+#celulares .fila .celular:hover .info {
+    opacity: 1;
+    bottom: 0;
+}
+
+#celulares .fila .celular .info h4,
+#celulares .fila .celular .info .descripcion,
+#celulares .fila .celular .info .precio {
+    margin: 5px 0;
+}
+
+#celulares .fila .celular .info .agregar-carro {
+    display: block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#celulares .fila .celular .info .agregar-carro:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#celulares .fila .celular.oferta {
+    border: 2px solid #2dbade;
+}
+
+#celulares .fila .celular.oferta .info {
+    background-color: rgba(30, 172, 165, 0.8);
+}
+
+@media (max-width: 768px) {
+    #celulares .fila .celular {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    #celulares .fila .celular {
+        flex: 1 1 100%;
+    }
+}
